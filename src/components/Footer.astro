@@ -1,0 +1,27 @@
+---
+import Social from "./Social.astro"
+
+const github = "ekosup"
+const platform = "GitHub"
+---
+<style>
+  footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+  <p>Learn more about my project on</p>
+    <span>
+      <Social platform='twitter' username='akueko'/>
+    </span>
+    <span>
+      <Social platform='github' username='ekosup'/>
+    </span>
+    <span>
+      <Social platform='youtube' username='@ekosupriyono8387'/>
+    </span>
+</footer>
