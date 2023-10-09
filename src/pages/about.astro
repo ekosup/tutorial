@@ -1,15 +1,63 @@
 ---
-title: "About Us"
-description: "Learn more about our company and team"
----
-<nav>
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/blog">Blog</a>
-</nav>
+const pageTitle = "About Me";
 
-<section>
-  <h1>About Us</h1>
-  <p>Welcome to our company! We are a team of passionate developers who love building amazing software.</p>
-  <p>Our mission is to create innovative solutions that help businesses grow and succeed.</p>
-</section>
+const identity = {
+  firstName: "Eko Supriyono",
+  country: "Indonesia",
+  occupation: "Engineer",
+  hobbies: ["photography", "movies", "coding"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+const happy = true;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+    <h1>{pageTitle}</h1>
+    <h2>... and my new Astro site!</h2>
+
+    <p>
+      I am working through Astro's introductory tutorial. This is the second
+      page on my website, and it's the first one I built myself!
+    </p>
+
+    <p>
+      This site will update as I complete more of the tutorial, so keep checking
+      back and see how my journey is going!
+    </p>
+
+    <p>Here are a few facts about me:</p>
+    <ul>
+      <li>My name is {identity.firstName}.</li>
+      <li>
+        I live in {identity.country} and I work as a {identity.occupation}.
+      </li>
+      {
+        identity.hobbies.length >= 2 && (
+          <li>
+            Two of my hobbies are: {identity.hobbies[0]} and{" "}
+            {identity.hobbies[1]}
+          </li>
+        )
+      }
+    </ul>
+    <p>My skills are:</p>
+    <ul>
+      {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+
+    {happy && <p>I am very exited to learn astro to the fullest</p>}
+  </body>
+</html>
