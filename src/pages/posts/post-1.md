@@ -2,6 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 author: Eko Supriyono
 title: Introduction to Tailwind CSS
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 Tailwind CSS is a utility-first CSS framework that allows you to quickly build custom user interfaces. It provides a set of pre-defined CSS classes that you can use to style your HTML elements.
